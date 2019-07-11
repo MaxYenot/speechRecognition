@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+		<style type="text/css">
+		#app{
+			width: 500px;
+			margin: 0 auto;
+		}
+		#task{
+			text-align: center;
+		}
+		#theTask{
+			text-align: center;
+			min-height: 300px;
+			font-size: 30px;
+		}
+		#buttonSection{
+			text-align: center;
+			padding: 10px;
+		}
+		#buttonSection button{
+			font-size: 25px;
+			padding: 10px;
+			border-radius: 10px;
+			background: green;
+			color: white;
+		}
+		#buttonSection button:active{
+			
+		}
+          #buttonSection .btnDisabled{
+          background: gray;
+            color: white;
+          }
+		.b{
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+<small>Используется WebSpeechAPI. Используйте Google Chrome или Яндекс браузер. Разрешите приложению доступ к микрофону.</small>
+<div id="app"></div>
+
+
+<script type="text/javascript" src="constructorTT.js"></script>
+<script type="text/javascript">
+	var random = -1;
+	function makeRandom(){
+		random++;
+		console.log(random);
+	}
+	function chooseQuestion(){
+		makeRandom();
+		tasks[random].make();
+	}
+
+</script>
+
+
+<script type="text/javascript">
+	var tasks = [];
+
+	tasks.push(new TranslationTask("- Что ты собираешься делать?", "What are you going to do?", "what are you going to do"));
+  
+  tasks.push(new TranslationTask("- Я собираюсь прогуляться.", "I'm going to have a walk.", "I'm going to have a walk"));
+  tasks.push(new TranslationTask("- Что ты собираешься делать?", "What are you going to do?", "what are you going to do"));
+tasks.push(new TranslationTask("- Я собираюсь обедать.", "I'm going to have dinner.", "I'm going to have dinner"));	
+  tasks.push(new TranslationTask("- Что он собирается делать?", "What is he going to do?", "What is he going to do"));
+tasks.push(new TranslationTask("- Он собирается принять душ.", "He's going to have a shower", "he's going to have a shower"));
+ tasks.push(new TranslationTask("- Что она собирается делать?", "What is she going to do?", "What is she going to do"));
+tasks.push(new TranslationTask("- Она собирается прогуляться.", "She's going to have a walk.", "She's going to have a walk"));
+
+
+//  
+//tasks.push(new TranslationTask("русскийТекст", "WhatToSay", "GoogleString"));
+	chooseQuestion();
+
+</script>
+<script id="hack">//moved to constructor</script>  
+</body>
+</html>
