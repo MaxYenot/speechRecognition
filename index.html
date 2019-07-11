@@ -39,7 +39,7 @@
 	</style>
 </head>
 <body>
-<small>Используется WebSpeechAPI. Используйте Google Chrome или Яндекс браузер. Разрешите приложению доступ к микрофону.</small>
+<small>Используется WebSpeechAPI. Используйте Google Chrome или Яндекс браузер. Разрешите приложению доступ к микрофону. Чтобы увидеть результат распознавания речи, откройте консоль (F12)</small>
 <div id="app"></div>
 
 
@@ -54,28 +54,23 @@
 		makeRandom();
 		tasks[random].make();
 	}
-
 </script>
 
 
 <script type="text/javascript">
 	var tasks = [];
-
 	tasks.push(new TranslationTask("- Что ты собираешься делать?", "What are you going to do?", "what are you going to do"));
   
-  tasks.push(new TranslationTask("- Я собираюсь прогуляться.", "I'm going to have a walk.", "I'm going to have a walk"));
+  tasks.push(new TranslationTask("- Я собираюсь прогуляться.", "I am going to have a walk.", "I am going to have a walk"));
   tasks.push(new TranslationTask("- Что ты собираешься делать?", "What are you going to do?", "what are you going to do"));
-tasks.push(new TranslationTask("- Я собираюсь обедать.", "I'm going to have dinner.", "I'm going to have dinner"));	
+tasks.push(new TranslationTask("- Я собираюсь обедать.", "I am going to have dinner.", "I am going to have dinner"));	
   tasks.push(new TranslationTask("- Что он собирается делать?", "What is he going to do?", "What is he going to do"));
-tasks.push(new TranslationTask("- Он собирается принять душ.", "He's going to have a shower", "he's going to have a shower"));
+tasks.push(new TranslationTask("- Он собирается принять душ.", "He is going to have a shower", "he is going to have a shower"));
  tasks.push(new TranslationTask("- Что она собирается делать?", "What is she going to do?", "What is she going to do"));
-tasks.push(new TranslationTask("- Она собирается прогуляться.", "She's going to have a walk.", "She's going to have a walk"));
-
-
+tasks.push(new TranslationTask("- Она собирается прогуляться.", "She is going to have a walk.", "She is going to have a walk"));
 //  
 //tasks.push(new TranslationTask("русскийТекст", "WhatToSay", "GoogleString"));
 	chooseQuestion();
-
 </script>
 <script id="hack">//moved to constructor</script>  
 </body>
